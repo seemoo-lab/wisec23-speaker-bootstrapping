@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <!-- interface-name window.ui -->
+  <!-- interface-description Pairing Window -->
+  <!-- interface-copyright SEEMOO Lab @ TU Darmstadt -->
+  <!-- interface-authors Markus Scheck
+Advised by Florentin Putz -->
+  <requires lib="gtk" version="4.6"/>
+  <template class="LinuxClientGuiWindow" parent="GtkWindow">
+    <signal name="close-request" handler="close_req"/>
+    <property name="default-height">400</property>
+    <property name="default-width">800</property>
+    <property name="title">Sonar</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar"/>
+    </child>
+    <child>
+      <object class="GtkStack" id="stack">
+        <child>
+          <object class="GtkGrid" id="wifi_layout">
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">SSID</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="css-classes">heading</property>
+                <property name="halign">center</property>
+                <property name="label">Enter your WiFi credentials</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">2</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="ssid">
+                <property name="halign">center</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-end">5</property>
+                <property name="margin-start">5</property>
+                <property name="margin-top">5</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Password</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="wpass">
+                <property name="halign">center</property>
+                <property name="input-purpose">password</property>
+                <property name="invisible-char-set">True</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-end">5</property>
+                <property name="margin-start">5</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="nw_confirm">
+                <property name="halign">end</property>
+                <property name="label">Confirm</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-end">5</property>
+                <signal name="clicked" handler="nw_confirm"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="img_layout">
+            <property name="halign">center</property>
+            <property name="orientation">vertical</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkImage" id="img_view">
+                <property name="icon-name">preferences-system-symbolic</property>
+                <property name="pixel-size">150</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="img_text">
+                <property name="label">image text</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkGrid" id="word_select">
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">The Speaker will read out a Word. Select it.</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">6</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="word1">
+                <property name="margin-end">3</property>
+                <property name="margin-top">5</property>
+                <signal name="clicked" handler="word_sel"/>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">2</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="word2">
+                <property name="margin-end">2</property>
+                <property name="margin-start">2</property>
+                <property name="margin-top">5</property>
+                <signal name="clicked" handler="word_sel"/>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="column-span">2</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="word3">
+                <property name="margin-start">3</property>
+                <property name="margin-top">5</property>
+                <signal name="clicked" handler="word_sel"/>
+                <layout>
+                  <property name="column">4</property>
+                  <property name="column-span">2</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="word4">
+                <property name="margin-end">2</property>
+                <property name="margin-top">5</property>
+                <signal name="clicked" handler="word_sel"/>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">3</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="word5">
+                <property name="margin-start">3</property>
+                <property name="margin-top">5</property>
+                <signal name="clicked" handler="word_sel"/>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="column-span">3</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="label">I hear multiple or no words</property>
+                <property name="margin-top">5</property>
+                <signal name="clicked" handler="word_sel"/>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">6</property>
+                  <property name="row">3</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="label">My word is not shown</property>
+                <property name="margin-top">5</property>
+                <signal name="clicked" handler="word_sel"/>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">6</property>
+                  <property name="row">4</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkGrid" id="naming_layout">
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Name</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="css-classes">heading</property>
+                <property name="halign">center</property>
+                <property name="label">Name your speaker</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">2</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="spk_name">
+                <property name="halign">center</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-end">5</property>
+                <property name="margin-start">5</property>
+                <property name="margin-top">5</property>
+                <signal name="editing-done" handler="name_confirm"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="name_confirm">
+                <property name="halign">end</property>
+                <property name="label">Confirm</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-end">5</property>
+                <signal name="clicked" handler="name_confirm"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

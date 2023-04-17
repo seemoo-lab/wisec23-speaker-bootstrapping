@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Pairing allowance mode">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:enabled="true"
+                android:visible="true">
+                <item
+                    android:id="@+id/pm_always"
+                    android:enabled="true"
+                    android:title="Allow indefinitely" />
+                <item
+                    android:id="@+id/pm_explicit"
+                    android:enabled="true"
+                    android:title="Explicit by other client" />
+                <item
+                    android:id="@+id/pm_timer"
+                    android:enabled="true"
+                    android:title="Clients can allow for five minutes" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/pair_now"
+        android:title="Allow pairing now" />
+</menu>

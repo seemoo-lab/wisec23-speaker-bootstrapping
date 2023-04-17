@@ -1,0 +1,14 @@
+{
+    "name": "libliquid",
+    "buildsystem": "cmake",
+    "build-options": {
+    	"build-args": [
+            "--share=network"
+        ]
+    },
+    "sources": [{
+        "type": "git",
+        "url": "https://github.com/quiet/quiet-dsp.git",
+        "branch": "devel"
+    }]
+}

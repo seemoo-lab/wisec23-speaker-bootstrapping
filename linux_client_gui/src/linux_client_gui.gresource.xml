@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/de/seemoo/speakerclient">
+    <file>window.ui</file>
+    <file>main.ui</file>
+    <file>control.ui</file>
+    <file>intro.ui</file>
+    <file>gtk/help-overlay.ui</file>
+  </gresource>
+</gresources>

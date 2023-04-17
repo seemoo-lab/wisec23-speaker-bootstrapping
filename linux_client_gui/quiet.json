@@ -1,0 +1,13 @@
+{
+    "name": "libquiet",
+    "buildsystem": "cmake",
+    "build-options": {
+    	"build-args": [
+            "--share=network"
+        ]
+    },
+    "sources": [{
+        "type": "git",
+        "url": "https://github.com/quiet/quiet.git"
+    }]
+}

@@ -1,0 +1,1 @@
+i18n.gettext('linux_client_gui', preset: 'glib')

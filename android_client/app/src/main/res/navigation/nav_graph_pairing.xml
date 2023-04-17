@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="de.seemoo.sonar.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_requestFragment"
+            app:destination="@id/requestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordselect"
+        android:name="de.seemoo.sonar.WordSelectFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/word_select_fragment">
+        <action
+            android:id="@+id/action_wordselect_to_namingFragment"
+            app:destination="@id/namingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="de.seemoo.sonar.ConfirmFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_confirm" >
+        <action
+            android:id="@+id/action_confirmFragment_to_wordselect"
+            app:destination="@id/wordselect" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchingFragment"
+        android:name="de.seemoo.sonar.SearchingFragment"
+        android:label="fragment_searching"
+        tools:layout="@layout/fragment_searching" />
+    <fragment
+        android:id="@+id/namingFragment"
+        android:name="de.seemoo.sonar.NamingFragment"
+        android:label="fragment_naming"
+        tools:layout="@layout/fragment_naming" >
+        <action
+            android:id="@+id/action_namingFragment_to_networkSetupFragment"
+            app:destination="@id/networkSetupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/networkSetupFragment"
+        android:name="de.seemoo.sonar.NetworkSetupFragment"
+        android:label="fragment_network_setup"
+        tools:layout="@layout/fragment_network_setup" >
+        <action
+            android:id="@+id/action_networkSetupFragment_to_searchingFragment"
+            app:destination="@id/searchingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="de.seemoo.sonar.RequestFragment"
+        android:label="fragment_request"
+        tools:layout="@layout/fragment_request" >
+        <action
+            android:id="@+id/action_requestFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>

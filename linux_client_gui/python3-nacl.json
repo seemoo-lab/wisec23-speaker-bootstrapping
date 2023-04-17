@@ -1,0 +1,17 @@
+{
+    "name": "python-nacl",
+    "buildsystem": "simple",
+    "build-options": {
+    	"build-args": [
+            "--share=network"
+        ]
+    },
+    "sources": [{
+        "type": "git",
+        "url": "https://github.com/Markussha/pynacl.git",
+        "branch": "main"
+    }],
+    "build-commands": [
+        "pip3 install --prefix=${FLATPAK_DEST} ."
+    ]
+}

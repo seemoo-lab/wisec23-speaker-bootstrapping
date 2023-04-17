@@ -1,0 +1,7 @@
+data/de.seemoo.speakerclient.desktop.in
+data/de.seemoo.speakerclient.appdata.xml.in
+data/de.seemoo.speakerclient.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+

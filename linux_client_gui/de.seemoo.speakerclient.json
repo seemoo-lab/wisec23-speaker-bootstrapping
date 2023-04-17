@@ -1,0 +1,58 @@
+{
+    "app-id" : "de.seemoo.speakerclient",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "master",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "linux_client_gui",
+    "finish-args" : [
+        "--share=network",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--device=all",
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.freedesktop.Notifications",
+        "--socket=pulseaudio"
+    ],
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
+    	"python3-numpy.json",
+    	"python3-sounddevice.json",
+    	"python3-portaudio.json",
+    	"libcorrect.json",
+    	"libliquid.json",
+    	"jansson.json",
+    	"quiet.json",
+    	"python3-quiet.json",
+    	"python3-requests.json",
+    	"python3-nacl.json",
+    	"python3-zeroconf.json",
+        {
+            "name" : "SpeakerClient",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "file:///home/markus/Projekte/linux_client_gui"
+                }
+            ]
+        }
+
+
+
+
+
+
+    ]
+}

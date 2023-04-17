@@ -1,0 +1,20 @@
+{
+    "name": "libjansson",
+    "buildsystem": "simple",
+    "build-options": {
+    	"build-args": [
+            "--share=network"
+        ]
+    },
+    "build-commands": [
+    	"autoreconf -i",
+        "./configure --prefix=/app",
+        "make",
+        "make install"
+
+    ],
+    "sources": [{
+        "type": "git",
+        "url": "https://github.com/akheron/jansson.git"
+    }]
+}

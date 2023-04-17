@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <!-- interface-description Main Window -->
+  <!-- interface-copyright SEEMOO Lab @ TU Darmstadt -->
+  <!-- interface-authors Markus Scheck
+Advised by Florentin Putz -->
+  <requires lib="gtk" version="4.6"/>
+  <template class="MainWindow" parent="GtkApplicationWindow">
+    <property name="title">Sonar</property>
+    <property name="default-height">400</property>
+    <property name="default-width">800</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar">
+        <child>
+          <object class="GtkButton" id="topBtn">
+            <property name="icon-name">list-add-symbolic</property>
+            <signal name="clicked" handler="add"/>
+          </object>
+        </child>
+        <child type="end">
+          <object class="GtkMenuButton">
+            <property name="direction">none</property>
+            <property name="name">primary_menu</property>
+            <property name="menu-model">primary_menu</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkStack" id="stack">
+        <child>
+          <object class="GtkScrolledWindow" id="list_layout">
+            <child>
+              <object class="GtkFrame">
+                <property name="margin-bottom">5</property>
+                <property name="margin-end">5</property>
+                <property name="margin-start">5</property>
+                <property name="margin-top">5</property>
+                <property name="valign">start</property>
+                <child>
+                  <object class="GtkTreeView" id="list_spk">
+                    <signal name="row-activated" handler="row_clicked"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="img_layout">
+            <property name="halign">center</property>
+            <property name="orientation">vertical</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkImage" id="img_view">
+                <property name="icon-name">tab-new-symbolic</property>
+                <property name="pixel-size">150</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="img_text">
+                <property name="label">No speaker available. Pair a new one.</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About sonar</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

@@ -1,0 +1,19 @@
+{
+    "name": "libcorrect",
+    "buildsystem": "simple",
+    "build-options": {
+    	"build-args": [
+            "--share=network"
+        ]
+    },
+    "build-commands": [
+        "./configure --prefix=/app",
+        "make",
+        "make install || true"
+
+    ],
+    "sources": [{
+        "type": "git",
+        "url": "https://github.com/quiet/libfec.git"
+    }]
+}

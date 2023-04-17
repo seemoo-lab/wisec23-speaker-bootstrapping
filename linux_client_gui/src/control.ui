@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <!-- interface-description Control window for interacting with speaker -->
+  <!-- interface-copyright SEEMOO Lab @ TU Darmstadt -->
+  <!-- interface-authors Markus Scheck
+Advised by Florentin Putz -->
+  <requires lib="gtk" version="4.6"/>
+  <template class="ControlWindow" parent="GtkWindow">
+    <property name="title">Sonar</property>
+    <child>
+      <object class="GtkBox">
+        <child>
+          <object class="GtkGrid">
+            <child>
+              <object class="GtkButton">
+                <property name="icon-name">audio-volume-medium-symbolic</property>
+                <signal name="clicked" handler="less"/>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">1</property>
+                  <property name="row">2</property>
+                  <property name="row-span">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="icon-name">media-playback-stop-symbolic</property>
+                <signal name="clicked" handler="stopb"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="column-span">1</property>
+                  <property name="row">1</property>
+                  <property name="row-span">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="icon-name">media-playback-start-symbolic</property>
+                <signal name="clicked" handler="playb"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="column-span">1</property>
+                  <property name="row">2</property>
+                  <property name="row-span">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="icon-name">audio-volume-high-symbolic</property>
+                <signal name="clicked" handler="more"/>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="column-span">1</property>
+                  <property name="row">2</property>
+                  <property name="row-span">1</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkFrame">
+            <property name="label">Pairing settings</property>
+            <property name="margin-bottom">5</property>
+            <property name="margin-end">5</property>
+            <property name="margin-start">5</property>
+            <property name="margin-top">6</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkCheckButton" id="cb_alw">
+                    <property name="halign">start</property>
+                    <property name="label">Always allow pairing</property>
+                    <signal name="toggled" handler="always"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="cb_exp">
+                    <property name="label">Explicitly allow pairing</property>
+                    <signal name="toggled" handler="explicit"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="cb_tim">
+                    <property name="label">Allow for five minutes</property>
+                    <signal name="toggled" handler="timer"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="allow_btn">
+                    <property name="label">Allow now</property>
+                    <signal name="clicked" handler="allow"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

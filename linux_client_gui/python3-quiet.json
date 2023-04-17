@@ -1,0 +1,16 @@
+{
+    "name": "python-quiet",
+    "buildsystem": "simple",
+    "build-options": {
+    	"build-args": [
+            "--share=network"
+        ]
+    },
+    "sources": [{
+        "type": "git",
+        "url": "https://github.com/xiongyihui/quiet.py.git"
+    }],
+    "build-commands": [
+        "pip3 install --prefix=${FLATPAK_DEST} ."
+    ]
+}

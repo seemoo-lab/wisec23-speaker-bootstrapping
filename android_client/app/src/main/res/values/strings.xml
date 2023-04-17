@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Sonar</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="sure_delete">Do you want to delete this connection?</string>
+    <string name="cancel">No</string>
+    <string name="ok">Yes</string>
+    <string name="about">About</string>
+    <string name="title_activity_connecting">Pairing</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="sb_new_dev_text">New device found!</string>
+    <string name="sb_new_dev_action">Setup</string>
+    <string name="preference_file_key">key_value_store_de_seemoo_sonar</string>
+    <string name="uuid">UUID</string>
+    <string name="i_hear_multiple_words">I hear multiple or no words</string>
+    <string name="what_do_you_hear">What do you hear?</string>
+    <string name="the_speaker_will_read_out_a_word_please_select_it">The speaker will read out a word. Please select it.</string>
+    <string name="button_placeholder">Button</string>
+    <string name="my_word_is_not_shown">My word is not shown</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pairing">Pairing</string>
+    <string name="long_press_the_speaker_button_to_confirm_pairing">Long-press the speaker button to confirm pairing</string>
+    <string name="listening_for_your_speaker_point_your_microphone_at_it">Listening for your speaker. Point your Smartphone at it.</string>
+    <string name="looking_for_your_device">Looking for your device...</string>
+    <string name="no_devices_available_yet_pair_a_speaker">No devices available yet. Pair a Speaker.</string>
+    <string name="pass">password</string>
+    <string name="on_the_startpage_you_may_see_three_different_tiles_representing_speakers">On the startpage, you may see three different tiles representing speakers:</string>
+    <string name="welcome_to_sonar_this_page_introduces_you_to_the_main_control_paradimes_of_this_app">Welcome to Sonar. This page introduces you to the main control paradimes of this app.</string>
+    <string name="paired_and_available">Paired and available</string>
+    <string name="uuid_and_ip">UUID and IP</string>
+    <string name="not_paired_and_available">Not paired and available</string>
+    <string name="uuid_and_ip2">UUID and IP</string>
+    <string name="paired_and_unavailable">Paired and unavailable</string>
+    <string name="uuid_">UUID</string>
+    <string name="you_can_delete_connections_by_using_the_trashcan_icon_entirely_new_speakers_that_were_never_set_up_before_are_automatically_detected_by_the_app_and_a_popup_asks_you_whether_you_want_to_set_it_up">You can delete connections by using the trashcan icon. Entirely new speakers that were never set up before are automatically detected by the app and a popup asks you whether you want to set it up.</string>
+    <string name="okay">Okay</string>
+    <string name="choose_a_unique_name_for_your_speaker_you_can_choose_any_name_you_want">Choose a unique name for your speaker. You can choose any name you want.</string>
+    <string name="the_ssid_and_password_were_automatically_read_out_from_your_device_just_confirm_those_settings_or_alter_them_if_necessary">The SSID and password were automatically read out from your device. Just confirm those settings or alter them if necessary.</string>
+    <string name="confirm_pairing_from_another_client">Confirm pairing from another client</string>
+    <string name="debug">debug</string>
+</resources>

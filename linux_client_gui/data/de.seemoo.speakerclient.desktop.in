@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=linux_client_gui
+Exec=linux_client_gui
+Icon=de.seemoo.speakerclient
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
